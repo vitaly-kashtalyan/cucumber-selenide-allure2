@@ -18,6 +18,7 @@ public class ComputerDatabaseTest {
     @BeforeClass
     public static void initSettings() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver-windows-32bit.exe");
         Configuration.baseUrl = BASE_URL;
         Configuration.browser = "chrome";
         Configuration.reportsFolder = "target/reports";
